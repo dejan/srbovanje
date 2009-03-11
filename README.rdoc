@@ -1,0 +1,12 @@
+= srbovanje
+
+Esencijalni plugin za Rails aplikaciju pravljenu za srpsko govorno područje
+
+== Upotreba
+
+  >> "Ђурђевак".recode_sr_latin
+  => "Đurđevak"
+
+== Autor
+
+{Dejan Simić}[http://github.com/dejan]
