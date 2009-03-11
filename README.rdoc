@@ -1,6 +1,7 @@
 = srbovanje
 
-Esencijalni plugin za Rails aplikaciju pravljenu za srpsko govorno područje
+Ruby gem za transliteraciju ćirilice na latinicu i tzv. ASCII latinicu
+
 
 == Upotreba
 
@@ -9,6 +10,13 @@ Esencijalni plugin za Rails aplikaciju pravljenu za srpsko govorno područje
 
   >> "Железница Србије".recode_sr_ascii_latin
   => "Zeleznica Srbije"
+
+
+== Često postavljeno pitanje
+
+P: Zašto "recode_sr_latin" kao naziv metode?
+O: Zbog http://man.he.net/man1/recode-sr-latin
+
 
 == Autor
 
