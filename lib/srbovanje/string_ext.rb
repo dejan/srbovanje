@@ -31,9 +31,31 @@ class String
     'џ' => 'dž',  'Џ' => 'DŽ',
     'ш' => 'š',   'Ш' => 'Š' }
 
+  #
+  # Some mapping appears to be missing like: 
+  #
+  #    'dž' => 'dz', 'DŽ' => 'DZ'
+  #
+  # but those are not needed since
+  # 'ž' => 'z' and 'Ž' => 'Z' will recode those
+  #
+  @@recode_sr_ascii_latin_map = @@recode_sr_latin_map.merge(
+    'ћ' => 'c', 'ć' => 'c',       'Ћ' => 'C', 'Ć' => 'C', 
+    'ч' => 'c', 'č' => 'c',       'Ч' => 'C', 'Č' => 'C',
+    'ж' => 'z', 'ž' => 'z',       'Ж' => 'Z', 'Ž' => 'Z',
+    'š' => 's', 'ш' => 's',       'Ш' => 'S', 'Š' => 'S',
+    'đ' => 'dj', 'ђ' => 'dj',     'Ђ' => 'DJ', 'Đ' => 'DJ', 
+    'џ' => 'dz', 'Џ' => 'DZ')
+
   def recode_sr_latin
     self.gsub(/.+?/) do |chr|
       @@recode_sr_latin_map[chr] || chr
+    end
+  end
+  
+  def recode_sr_ascii_latin
+    self.gsub(/.+?/) do |chr|
+      @@recode_sr_ascii_latin_map[chr] || chr
     end
   end
 end

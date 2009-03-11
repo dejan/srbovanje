@@ -7,6 +7,9 @@ Esencijalni plugin za Rails aplikaciju pravljenu za srpsko govorno područje
   >> "Ђурђевак".recode_sr_latin
   => "Đurđevak"
 
+  >> "Железница Србије".recode_sr_ascii_latin
+  => "Zeleznica Srbije"
+
 == Autor
 
 {Dejan Simić}[http://github.com/dejan]
