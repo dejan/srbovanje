@@ -32,12 +32,15 @@ class String
     'ш' => 'š',   'Ш' => 'Š' }
 
   #
-  # Some mapping appears to be missing like: 
+  # Some mappings appear to be missing like: 
   #
-  #    'dž' => 'dz', 'DŽ' => 'DZ'
+  #   'dž' => 'dz', 'DŽ' => 'DZ'
   #
-  # but those are not needed since
-  # 'ž' => 'z' and 'Ž' => 'Z' will recode those
+  # but those are not needed since:
+  #
+  #   'ž' => 'z' and 'Ž' => 'Z' 
+  # 
+  # will cover those.
   #
   @@recode_sr_ascii_latin_map = @@recode_sr_latin_map.merge(
     'ћ' => 'c', 'ć' => 'c',       'Ћ' => 'C', 'Ć' => 'C', 
