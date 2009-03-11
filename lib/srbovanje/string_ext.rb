@@ -44,7 +44,7 @@ class String
       @@recode_sr_latin_map[chr] || chr
     end
   end
-  
+
   def recode_sr_ascii_latin
     self.gsub(/.+?/) do |chr|
       @@recode_sr_ascii_latin_map[chr] || chr
