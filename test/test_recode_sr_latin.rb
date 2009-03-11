@@ -5,6 +5,7 @@ class TestRecodeSrLating < Test::Unit::TestCase
     assert_equal("NJEGOŠ", "ЊЕГОШ".recode_sr_latin)
     assert_equal("Šaban Šaulić", "Шабан Шаулић".recode_sr_latin)
     assert_equal("elektrodistribucija", "електродистрибуција".recode_sr_latin)
+    assert_equal("Đurđevak", "Ђурђевак".recode_sr_latin)
   end
 
   def test_non_convertive_characters
