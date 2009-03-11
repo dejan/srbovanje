@@ -1,0 +1,5 @@
+* danger methods (recode_sr_latin!, ...)
+* String.abeceda, String.azbuka methods
+* slugify method (+ slugify!)
+* performance metrics & improvements
+* more tests
