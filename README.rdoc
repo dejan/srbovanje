@@ -14,8 +14,8 @@ Ruby gem za transliteraciju ćirilice na latinicu i tzv. ASCII latinicu
 
 == Često postavljeno pitanje
 
-P: Zašto "recode_sr_latin" kao naziv metode?
-O: Zbog http://man.he.net/man1/recode-sr-latin
+  P: Zašto "recode_sr_latin" kao naziv metode?
+  O: Zbog http://man.he.net/man1/recode-sr-latin
 
 
 == Autor
