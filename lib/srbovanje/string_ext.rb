@@ -87,14 +87,18 @@ class String
       'Џ' => 'DZ')
 
   def recode_sr_latin
-    self.gsub(/.+?/) do |chr|
-      @@recode_sr_latin_map[chr] || chr
-    end
+    recode @@recode_sr_latin_map
   end
 
   def recode_sr_ascii_latin
+    recode @@recode_sr_ascii_latin_map
+  end
+
+private
+
+  def recode(mapping)
     self.gsub(/.+?/) do |chr|
-      @@recode_sr_ascii_latin_map[chr] || chr
+      mapping[chr] || chr
     end
   end
 end
