@@ -1,4 +1,5 @@
 class String
+
   @@recode_sr_latin_map = {
     'а' => 'a',
     'А' => 'A',
@@ -87,21 +88,29 @@ class String
       'Џ' => 'DZ')
 
   def recode_sr_latin
-    recode @@recode_sr_latin_map
+    self.class.recode(self.dup, @@recode_sr_latin_map)
+  end
+
+  def recode_sr_latin!
+    self.class.recode(self, @@recode_sr_latin_map)
   end
 
   def recode_sr_ascii_latin
-    recode @@recode_sr_ascii_latin_map
+    self.class.recode(self.dup, @@recode_sr_ascii_latin_map)
+  end
+
+  def recode_sr_ascii_latin!
+    self.class.recode(self, @@recode_sr_ascii_latin_map)
   end
 
   def self.abeceda
-    %w(A B C Č Ć D DŽ Đ E F G H I J K L LJ M N NJ O P R S Š T U V Z Ž)
+    @@abeceda ||= %w(A B C Č Ć D DŽ Đ E F G H I J K L LJ M N NJ O P R S Š T U V Z Ž)
   end
 
 private
 
-  def recode(mapping)
-    self.gsub(/.+?/) do |chr|
+  def self.recode(str, mapping)
+    str.gsub!(/.+?/) do |chr|
       mapping[chr] || chr
     end
   end
