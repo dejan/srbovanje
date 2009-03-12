@@ -17,4 +17,8 @@ class TestStringExt < Test::Unit::TestCase
     assert_equal("Zeleznica Srbije", "Железница Србије".recode_sr_ascii_latin)
     assert_equal("Cokolada", "Čokolada".recode_sr_ascii_latin)
   end
+
+  def test_abeceda
+    assert_equal(30, String.abeceda.size)
+  end
 end

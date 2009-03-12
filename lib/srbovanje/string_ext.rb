@@ -94,6 +94,10 @@ class String
     recode @@recode_sr_ascii_latin_map
   end
 
+  def self.abeceda
+    %w(A B C Č Ć D DŽ Đ E F G H I J K L LJ M N NJ O P R S Š T U V Z Ž)
+  end
+
 private
 
   def recode(mapping)
