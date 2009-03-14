@@ -39,4 +39,21 @@ class TestStringExt < Test::Unit::TestCase
   def test_abeceda
     assert_equal(30, String.abeceda.size)
   end
+  
+  def test_slugify
+    assert_equal("zeleznica-srbije", "Железница Србије".slugify)
+    assert_equal("kako-je", "Kako je?".slugify)
+    assert_equal("mis-zaba", "miš,žaba".slugify)
+    assert_equal("mis-zaba", "миш, жаба".slugify)
+    assert_equal("agencija", " aGenCIJa   ".slugify)
+    assert_equal("vamo-tamo", "vamo-tamo".slugify)
+    assert_equal("vamo-tamo", "vamo  tamo".slugify)
+    assert_equal("pokvarenspejs", "Pokvaren Spejs".slugify(nil))
+    assert_equal("abcdeavioni", "a b c d e avioni".slugify(''))
+    assert_equal("-", "び諸芸や奇抜な衣装".slugify)
+    assert_equal("-", "び諸芸や奇 抜な衣 装 び諸芸や 奇抜な衣装".slugify)
+    assert_equal("", "び諸芸や奇抜な衣装".slugify('-', false))
+    assert_equal("-", "び諸芸や奇抜な衣装".slugify('-', true))
+    assert_equal("+", "び諸芸や奇抜な衣装 び諸芸や奇抜な衣装".slugify('+'))
+  end
 end

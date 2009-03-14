@@ -107,7 +107,39 @@ class String
     @@abeceda ||= %w(A B C Č Ć D DŽ Đ E F G H I J K L LJ M N NJ O P R S Š T U V Z Ž)
   end
 
+  def slugify(separator = '-', return_separator_if_empty = true)
+    s = parameterize(self.recode_sr_ascii_latin, separator)
+    s.empty? && return_separator_if_empty ? separator : s
+  end
+
 private
+
+  # NOTE: slighlty modified after porting from ActiveSupport
+  #
+  # Replaces special characters in a string so that it may be used as part of a 'pretty' URL.
+  #
+  # ==== Examples
+  #
+  #   @person = Person.find(1)
+  #   # => #<Person id: 1, name: "Donald E. Knuth">
+  #
+  #   <%= link_to(@person.name, person_path(@person)) %>
+  #   # => <a href="/person/1-donald-e-knuth">Donald E. Knuth</a>
+  #
+  def parameterize(string, sep = '-')
+    # nil is same as blank
+    sep = sep || ''
+    parameterized_string = string.gsub(/[^a-z0-9\-_\+]+/i, sep)
+    # Turn unwanted chars into the seperator
+    unless sep.empty?
+      re_sep = Regexp.escape(sep)
+      # No more than one of the separator in a row.
+      parameterized_string.gsub!(/#{re_sep}{2,}/, sep)
+      # Remove leading/trailing separator.
+      parameterized_string.gsub!(/^#{re_sep}|#{re_sep}$/i, '')
+    end
+    parameterized_string.downcase
+  end
 
   def self.recode(str, mapping)
     str.gsub!(/.+?/) do |chr|
