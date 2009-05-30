@@ -55,5 +55,8 @@ class TestStringExt < Test::Unit::TestCase
     assert_equal("", "び諸芸や奇抜な衣装".slugify('-', false))
     assert_equal("-", "び諸芸や奇抜な衣装".slugify('-', true))
     assert_equal("+", "び諸芸や奇抜な衣装 び諸芸や奇抜な衣装".slugify('+'))
+    assert_equal("ako-ako", 'ako, ako'.slugify)
+    assert_equal("ako-ako", 'ako,ako'.slugify)
+    assert_equal("ako-ako", 'ako ako'.slugify)
   end
 end
