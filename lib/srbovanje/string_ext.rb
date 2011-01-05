@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 String.class_eval do
   @@recode_sr_latin_map = {
     'а' => 'a',

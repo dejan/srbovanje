@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 require File.dirname(__FILE__) + '/test_helper'
 
 class TestStringExt < Test::Unit::TestCase
@@ -30,7 +32,7 @@ class TestStringExt < Test::Unit::TestCase
     assert_equal("Железница Србије", str)
   end
 
-  def test_recode_sr_latin!
+  def test_recode_sr_ascii_latin!
     str = "ноћ"
     assert_equal("noc", str.recode_sr_ascii_latin!)
     assert_equal("noc", str)

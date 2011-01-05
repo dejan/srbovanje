@@ -1,3 +1,7 @@
+## 0.2.0, 2011-01-05
+* Fix nadogradnje Stringa upotrebom String.class_eval metode
+* Ruby 1.9 podrška
+
 ## 0.1.0, 2009-03-14
 * String#slugify
 
