@@ -1,5 +1,4 @@
-class String
-
+String.class_eval do
   @@recode_sr_latin_map = {
     'а' => 'a',
     'А' => 'A',
