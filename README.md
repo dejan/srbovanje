@@ -17,6 +17,11 @@ Ruby gem za transliteraciju ćirilice na latinicu i tzv. ASCII latinicu
     >> "Железница Србије".recode_sr_ascii_latin
     => "Zeleznica Srbije"
 
+    >> "Железница Србије".slugify
+    => "zeleznica-srbije"
+
+    >> String.abeceda
+    => ["A", "B", "C", "Č", "Ć", "D", "DŽ", "Đ", "E", "F", "G", "H", "I", "J", "K", "L", "LJ", "M", "N", "NJ", "O", "P", "R", "S", "Š", "T", "U", "V", "Z", "Ž"]
 
 ## Zašto "recode_sr_latin" kao naziv metode?
 
