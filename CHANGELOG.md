@@ -1,3 +1,7 @@
+## 0.2.1, 2011-01-05
+* Ruby 1.9.2 fix: upozorenja
+* Ruby 1.9.2 fix: load path za testove
+
 ## 0.2.0, 2011-01-05
 * Fix nadogradnje Stringa upotrebom String.class_eval metode
 * Ruby 1.9 podrška
