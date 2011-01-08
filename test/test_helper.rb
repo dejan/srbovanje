@@ -2,4 +2,5 @@
 
 require "test/unit"
 
-require File.dirname(__FILE__) + '/../lib/srbovanje'
+require File.expand_path("../../lib/srbovanje", __FILE__)
+
