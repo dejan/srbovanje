@@ -2,7 +2,7 @@
 
 String.class_eval do
   def self.recode_sr_latin_map
-    @@recode_sr_latin_map ||= {
+    {
       'а' => 'a',
       'А' => 'A',
       'б' => 'b',
@@ -66,8 +66,7 @@ String.class_eval do
   end
   
   def self.recode_sr_ascii_latin_map
-    @@recode_sr_ascii_latin_map ||= 
-      recode_sr_latin_map.merge(
+    recode_sr_latin_map.merge(
         'ћ' => 'c',
         'ć' => 'c',
         'ч' => 'c',
@@ -93,7 +92,7 @@ String.class_eval do
   end
 
   def self.abeceda
-    @@abeceda ||= %w(A B C Č Ć D DŽ Đ E F G H I J K L LJ M N NJ O P R S Š T U V Z Ž)
+    %w(A B C Č Ć D DŽ Đ E F G H I J K L LJ M N NJ O P R S Š T U V Z Ž)
   end
 
   def recode_sr_latin
