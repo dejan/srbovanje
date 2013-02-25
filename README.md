@@ -1,7 +1,7 @@
 srbovanje
 =========
 
-Ruby gem za transliteraciju ćirilice na latinicu i tzv. ASCII latinicu
+Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" latinicu
 
 
 ## Instaliranje
@@ -11,23 +11,35 @@ Ruby gem za transliteraciju ćirilice na latinicu i tzv. ASCII latinicu
 
 ## Korišćenje
 
-    >> "Ђурђевак".recode_sr_latin
+    >> "Ђурђевак".latinize
     => "Đurđevak"
 
-    >> "Железница Србије".recode_sr_ascii_latin
-    => "Zeleznica Srbije"
+    >> "Ђурђевак".latinize :ascii
+    => "Djurdjevak"
 
-    >> "Железница Србије".slugify
-    => "zeleznica-srbije"
-
-    >> String.abeceda
+    >> Srbovanje.abeceda
     => ["A", "B", "C", "Č", "Ć", "D", "DŽ", "Đ", "E", "F", "G", "H", "I", "J", "K", "L", "LJ", "M", "N", "NJ", "O", "P", "R", "S", "Š", "T", "U", "V", "Z", "Ž"]
 
-## Zašto "recode_sr_latin" kao naziv metode?
 
-Zbog <http://man.he.net/man1/recode-sr-latin>
+## MIT Licence
 
+Copyright (c) 2009 Dejan Simic
 
-## Autor
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-[Dejan Simić](http://github.com/dejan)
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
