@@ -1,3 +1,6 @@
+## 1.0.0, 2013-02-25
+* Novi, čistiji API; izbačen slugify
+
 ## 0.2.1, 2011-01-05
 * Ruby 1.9.2 fix: upozorenja
 * Ruby 1.9.2 fix: load path za testove
