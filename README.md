@@ -11,10 +11,10 @@ Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" latinicu
 
 ## Korišćenje
 
-    >> "Ђурђевак".latinize
+    >> "Ђурђевак".na_latinici
     => "Đurđevak"
 
-    >> "Ђурђевак".latinize :ascii
+    >> "Ђурђевак".na_latinici :ascii
     => "Djurdjevak"
 
     >> Srbovanje.abeceda
