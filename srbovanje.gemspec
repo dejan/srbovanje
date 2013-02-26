@@ -4,7 +4,7 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'srbovanje'
-  s.version     = '1.0.0'
+  s.version     = '1.0.1'
   s.date        = Date.today.to_s
 
   s.summary     = 'Ruby gem za transliteraciju ćirilice na latinicu i tzv. ASCII latinicu.'

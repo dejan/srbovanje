@@ -1,3 +1,6 @@
+## 1.0.1, 2013-02-26
+* Konfigurisanje i18n preslovljavanja
+
 ## 1.0.0, 2013-02-25
 * Novi, čistiji API; izbačen slugify
 
