@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    srbovanje (1.0.1)
+    srbovanje (1.0.2)
 
 GEM
   remote: https://rubygems.org/
