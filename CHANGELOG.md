@@ -1,3 +1,6 @@
+## 1.0.2, 2013-02-26
+* Railtie za i18n konfigurisanje
+
 ## 1.0.1, 2013-02-26
 * Konfigurisanje i18n preslovljavanja
 
