@@ -28,13 +28,23 @@ Ako zatreba, tu je i niz sa slovima abecede:
 Ako koristite Srbovanje uz Rails dobićete setovana pravila za preslovnjavanja 
 koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
 
-    # bez Srbovanja
-    >> "Đelem, Đelem".parameterize 
-    => "delem-delem"
+    ## bez Srbovanja
 
-    # uz Srbovanje
-    >> "Đelem, đelem".parameterize 
-    => "djelem-djelem"
+    >> "Karađorđeva šnicla".parameterize
+    => "karadordeva-snicla"
+    
+    >> "Шабан Шаулић".parameterize
+    => ""
+
+
+    ## uz Srbovanje
+    
+    >> "Karađorđeva šnicla".parameterize
+    => "karadjordjeva-snicla"
+
+    >> "Шабан Шаулић".parameterize
+    => "saban-saulic"
+
 
 ## MIT Licence
 
