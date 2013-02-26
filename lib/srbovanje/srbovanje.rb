@@ -1,15 +1,16 @@
 # encoding: utf-8
 
-class Srbovanje
-  def self.abeceda
+module Srbovanje
+
+  def abeceda
     %w(A B C Č Ć D DŽ Đ E F G H I J K L LJ M N NJ O P R S Š T U V Z Ž)
   end
 
-  def self.latinica_map(charset)
+  def latinica_map(charset)
     charset.to_s == 'ascii' ? latinica_ascii_map : latinica_full_map
   end
 
-  def self.latinica_full_map
+  def latinica_full_map
     @@latinica_map ||= {
       'а' => 'a',
       'А' => 'A',
@@ -73,7 +74,7 @@ class Srbovanje
       'Ш' => 'Š' }
   end
 
-  def self.latinica_ascii_map
+  def latinica_ascii_map
     @@latinica_ascii_map ||= latinica_full_map.merge(
         'ћ' => 'c',
         'ć' => 'c',
@@ -98,5 +99,7 @@ class Srbovanje
         'џ' => 'dz',
         'Џ' => 'DZ')
   end
+
+  extend self
 
 end
