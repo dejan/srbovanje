@@ -6,7 +6,9 @@ Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" latinicu
 
 ## Instaliranje
 
-    gem install srbovanje
+U Gemfile projekta dodajte:
+
+    gem 'srbovanje'
 
 
 ## Korišćenje
@@ -15,11 +17,24 @@ Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" latinicu
     => "Đurđevak"
 
     >> "Ђурђевак".na_latinici :ascii
-    => "Djurdjevak"
+    => "DJurdjevak"
+
+Ako zatreba, tu je i niz sa slovima abecede:
 
     >> Srbovanje.abeceda
     => ["A", "B", "C", "Č", "Ć", "D", "DŽ", "Đ", "E", "F", "G", "H", "I", "J", "K", "L", "LJ", "M", "N", "NJ", "O", "P", "R", "S", "Š", "T", "U", "V", "Z", "Ž"]
 
+
+Ako koristite Srbovanje uz Rails dobićete setovana pravila za preslovnjavanja 
+koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
+
+    # bez Srbovanja
+    >> "Đelem, Đelem".parameterize 
+    => "delem-delem"
+
+    # uz Srbovanje
+    >> "Đelem, đelem".parameterize 
+    => "djelem-djelem"
 
 ## MIT Licence
 
