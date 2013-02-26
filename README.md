@@ -36,7 +36,6 @@ koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
     >> "Шабан Шаулић".parameterize
     => ""
 
-
     ## uz Srbovanje
     
     >> "Karađorđeva šnicla".parameterize
