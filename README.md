@@ -13,10 +13,10 @@ U Gemfile projekta dodajte:
 
 ## Korišćenje
 
-    >> "Ђурђевак".na_latinici
+    >> "Ђурђевак".latinicom
     => "Đurđevak"
 
-    >> "Ђурђевак".na_latinici :ascii
+    >> "Ђурђевак".latinicom :ascii
     => "DJurdjevak"
 
 Ako zatreba, tu je i niz sa slovima abecede:
