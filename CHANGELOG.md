@@ -1,3 +1,7 @@
+## 2.0.0, 2014-07-13
+* preimenovana metoda na_latinici => latinicom
+* utisan warning "[deprecated] I18n.enforce_available_locales will default to true in the future..."
+
 ## 1.0.2, 2013-02-26
 * Railtie za i18n konfigurisanje
 
