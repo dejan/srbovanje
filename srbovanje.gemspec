@@ -2,7 +2,7 @@
 Gem::Specification.new do |gem|
   gem.name        = 'srbovanje'
   gem.summary     = 'Transliteracija ćirilice na latinicu i tzv. ASCII latinicu.'
-  gem.description = '"Ђурђевак".latinicom #=> "Đurđevak"'
+  gem.description = 'Transliteracija ćirilice na latinicu i tzv. ASCII latinicu.'
   
   gem.version     = '2.0.0'
 
