@@ -46,7 +46,8 @@ koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
 
 ## Slični projekti
 
-*  [Byk](https://github.com/topalovic/byk) - zavidno brža varijanta zahvaljujući C ekstenziji
+* [Byk](https://github.com/topalovic/byk) - zavidno brža varijanta zahvaljujući C ekstenziji
+* [preslovi](https://github.com/dejan/preslovi) - go paket i šel komanda
 
 ## MIT Licence
 
