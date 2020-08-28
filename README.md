@@ -16,7 +16,7 @@ U Gemfile projekta dodajte:
     >> "Ђурђевак".latinicom
     => "Đurđevak"
 
-    >> "Ђурђевак".latinicom :ascii
+    >> "Ђурђевак".latinicom_ascii
     => "DJurdjevak"
 
 Ako zatreba, tu je i niz sa slovima abecede:
@@ -25,19 +25,19 @@ Ako zatreba, tu je i niz sa slovima abecede:
     => ["A", "B", "C", "Č", "Ć", "D", "DŽ", "Đ", "E", "F", "G", "H", "I", "J", "K", "L", "LJ", "M", "N", "NJ", "O", "P", "R", "S", "Š", "T", "U", "V", "Z", "Ž"]
 
 
-Ako koristite Srbovanje uz Rails dobićete setovana pravila za preslovnjavanja 
+Ako koristite Srbovanje uz Rails dobićete setovana pravila za preslovljavanja
 koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
 
     ## bez Srbovanja
 
     >> "Karađorđeva šnicla".parameterize
     => "karadordeva-snicla"
-    
+
     >> "Шабан Шаулић".parameterize
     => ""
 
     ## uz Srbovanje
-    
+
     >> "Karađorđeva šnicla".parameterize
     => "karadjordjeva-snicla"
 
