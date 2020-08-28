@@ -13,6 +13,6 @@ describe String do
   end
 
   it 'preslovanjava u ošišanu latinicu' do
-    assert_equal("Zeleznica Srbije", "Железница Србије".latinicom(:ascii))
+    assert_equal("Zeleznica Srbije", "Железница Србије".latinicom_ascii)
   end
 end
