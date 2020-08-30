@@ -1,7 +1,7 @@
 srbovanje
 =========
 
-Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" latinicu
+Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" (ASCII) latinicu.
 
 ## Instaliranje
 

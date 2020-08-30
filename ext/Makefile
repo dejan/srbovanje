@@ -1,8 +1,7 @@
-default: clean lib/preslovi.so
+PLATFORM := $(shell ruby -e "puts [Gem::Platform.local.cpu, '-', Gem::Platform.local.os].join")
 
-lib/preslovi.so:
+default:
 	mkdir -p lib
-	go build -buildmode=c-shared -o lib/preslovi.so preslovi.go
+	rm -f lib/preslovi.$(PLATFORM).so
+	go build -buildmode=c-shared -o lib/preslovi.$(PLATFORM).so preslovi.go
 
-clean:
-	rm -rf lib
