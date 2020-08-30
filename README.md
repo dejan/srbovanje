@@ -13,7 +13,7 @@ U `Gemfile` projekta dodajte:
 gem 'srbovanje'
 ```
 
-Implementacija je u "čistom" Rubiju pa radi na svim platformama i verzijama Rubija.
+Implementacija je u "čistom" Rubiju pa [radi na svim platformama i verzijama Rubija](https://github.com/dejan/srbovanje/blob/master/.github/workflows/test.yml#L13-L15).
 
 ## Korišćenje
 
