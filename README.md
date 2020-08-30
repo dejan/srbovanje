@@ -1,8 +1,7 @@
 srbovanje
 =========
 
-Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" latinicu
-
+Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" (ASCII) latinicu.
 
 ## Instaliranje
 
@@ -10,46 +9,53 @@ U Gemfile projekta dodajte:
 
     gem 'srbovanje'
 
+Podržane platforme su Linux i macOS (darwin).
 
 ## Korišćenje
 
-    >> "Ђурђевак".latinicom
-    => "Đurđevak"
+```ruby
+>> "Ђурђевак".latinicom
+=> "Đurđevak"
 
-    >> "Ђурђевак".latinicom_ascii
-    => "DJurdjevak"
+>> "Ђурђевак".latinicom_ascii
+=> "Djurdjevak"
+```
 
 Ako zatreba, tu je i niz sa slovima abecede:
 
-    >> Srbovanje.abeceda
-    => ["A", "B", "C", "Č", "Ć", "D", "DŽ", "Đ", "E", "F", "G", "H", "I", "J", "K", "L", "LJ", "M", "N", "NJ", "O", "P", "R", "S", "Š", "T", "U", "V", "Z", "Ž"]
-
+```ruby
+>> Srbovanje.abeceda
+=> ["A", "B", "C", "Č", "Ć", "D", "Dž", "Đ", "E", "F", "G", "H", "I", "J", "K", "L", "Lj", "M", "N", "Nj", "O", "P", "R", "S", "Š", "T", "U", "V", "Z", "Ž"]
+```
 
 Ako koristite Srbovanje uz Rails dobićete setovana pravila za preslovljavanja
 koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
 
-    ## bez Srbovanja
+```ruby
+## bez Srbovanja
 
-    >> "Karađorđeva šnicla".parameterize
-    => "karadordeva-snicla"
+>> "Karađorđeva šnicla".parameterize
+=> "karadordeva-snicla"
 
-    >> "Шабан Шаулић".parameterize
-    => ""
+>> "Шабан Шаулић".parameterize
+=> ""
 
-    ## uz Srbovanje
+## uz Srbovanje
 
-    >> "Karađorđeva šnicla".parameterize
-    => "karadjordjeva-snicla"
+>> "Karađorđeva šnicla".parameterize
+=> "karadjordjeva-snicla"
 
-    >> "Шабан Шаулић".parameterize
-    => "saban-saulic"
+>> "Шабан Шаулић".parameterize
+=> "saban-saulic"
+```
 
-## Slični projekti
+## Performanse
 
-* [Byk](https://github.com/topalovic/byk) - zavidno brža varijanta zahvaljujući C ekstenziji
-* [preslovi](https://github.com/dejan/preslovi) - go paket i šel komanda
+Od verzije 3.0, Srbovanje koristi [Go](https://golang.org/) ekstenziju zbog
+dramatično boljih (30x) performansi. Ekstenzija je unapred kompajlirana i
+spakovana uz gem, tako da instaliranje nema dodatnih zahteva.
 
-## MIT Licence
+## MIT License
 
 Copyright (c) 2009 Dejan Simic
 
