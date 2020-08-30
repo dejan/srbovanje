@@ -2,7 +2,7 @@
 
 module Srbovanje
 
-  ABECEDA = %w(A B C Č Ć D DŽ Đ E F G H I J K L LJ M N NJ O P R S Š T U V Z Ž)
+  ABECEDA = %w(A B C Č Ć D Dž Đ E F G H I J K L Lj M N Nj O P R S Š T U V Z Ž)
 
   LATINICA_FULL_MAP = {
     "ЉА" => "LJA",

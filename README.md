@@ -16,12 +16,16 @@ Implementacija je u "čistom" Rubiju pa radi na svim platformama i verzijama Rub
 ## Korišćenje
 
 ```ruby
->> "Ђурђевак".latinicom
-=> "Đurđevak"
+>> "Љубав".latinicom
+=> "Ljubav"
 
->> "Ђурђевак".latinicom_ascii
-=> "Djurdjevak"
+>> "ĐURĐEVAK".latinicom_ascii
+=> "DJURDJEVAK"
 ```
+
+U primerima je takodje demostrirano pravilno preslovljavanje velikih digrafa:
+1. **Lj**ubav a ne **LJ**ubav
+2. **DJ**URDJEVAK a ne **Dj**URDJEVAK
 
 Ako zatreba, tu je i niz sa slovima abecede:
 
