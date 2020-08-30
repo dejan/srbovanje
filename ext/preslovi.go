@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+// TODO posto pakujemo ekstenziju ovo sada moze da koristi dejan/preslovi projekat preko gita
+
 var replacer = strings.NewReplacer(
 	"ЉА", "LJA",
 	"АЉ", "ALJ",

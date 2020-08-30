@@ -9,6 +9,8 @@ U Gemfile projekta dodajte:
 
     gem 'srbovanje'
 
+Podržane platforme su Linux i macOS (darwin).
+
 ## Korišćenje
 
 ```ruby
@@ -51,7 +53,7 @@ koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
 
 Od verzije 3.0, Srbovanje koristi [Go](https://golang.org/) ekstenziju zbog
 dramatično boljih (30x) performansi. Ekstenzija je unapred kompajlirana i
-spakovana uz gem, tako da instaliranje gema nema dodatnih zahteva.
+spakovana uz gem, tako da instaliranje nema dodatnih zahteva.
 
 ## MIT License
 

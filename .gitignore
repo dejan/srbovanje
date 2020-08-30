@@ -2,5 +2,3 @@ pkg/*
 Gemfile.lock
 *.gem
 TODO
-*.so
-*.h

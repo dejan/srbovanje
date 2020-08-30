@@ -4,4 +4,3 @@ default:
 	mkdir -p lib
 	rm -f lib/preslovi.$(PLATFORM).so
 	go build -buildmode=c-shared -o lib/preslovi.$(PLATFORM).so preslovi.go
-

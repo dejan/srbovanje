@@ -7,7 +7,7 @@ module Preslovi
 
   PLATFORM = "#{Gem::Platform.local.cpu}-#{Gem::Platform.local.os}"
 
-  ffi_lib "ext/lib/preslovi.#{PLATFORM}.so"
+  ffi_lib "#{__dir__}/../../ext/lib/preslovi.#{PLATFORM}.so"
 
   attach_function :latinicom, [:string], :string
   attach_function :latinicom_ascii, [:string], :string
