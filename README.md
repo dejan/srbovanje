@@ -22,7 +22,7 @@ String objekat je proširen metodama `latinicom` i `latinicom_ascii` koje vraća
 => "Ljubav"
 
 >> "ЉУБАВ".latinicom
-=> "LJUBAV" # primetite drugačije preslovljavanje digrafa u odnosu na prethodni primer: "LjUBAV" bi bilo pogrešno
+=> "LJUBAV" # primetite drugačije preslovljavanje "Љ" u odnosu na prethodni primer: "LjUBAV" bi bilo pogrešno
 
 >> "Đurđevak".latinicom_ascii
 => "Djurdjevak"
