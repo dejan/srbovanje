@@ -1,11 +1,13 @@
 Srbovanje
 =========
 
+[![Gem Version](https://badge.fury.io/rb/srbovanje.svg)](https://badge.fury.io/rb/srbovanje)
+
 Ruby gem za preslovljavanje ćirilice na latinicu i tzv. "ošišanu" (ASCII) latinicu.
 
 ## Instaliranje
 
-U Gemfile projekta dodajte:
+U `Gemfile` projekta dodajte:
 
 ```ruby
 gem 'srbovanje'
