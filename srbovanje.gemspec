@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
   gem.summary     = 'Transliteracija ćirilice na latinicu i tzv. ASCII latinicu.'
   gem.description = 'Transliteracija ćirilice na latinicu i tzv. ASCII latinicu.'
 
-  gem.version     = '2.1.0'
+  gem.version     = '2.2.0'
 
   gem.author      = 'Dejan Simic'
   gem.email       = 'desimic@gmail.com'
