@@ -1,4 +1,4 @@
-srbovanje
+Srbovanje
 =========
 
 Ruby gem za preslovljavanje ćirilice na latinicu i tzv. "ošišanu" (ASCII) latinicu.
@@ -15,13 +15,14 @@ Implementacija je u "čistom" Rubiju pa radi na svim platformama i verzijama Rub
 
 ## Korišćenje
 
+String objekat je proširen metodama `latinicom` i `latinicom_ascii` koje vraćaju novi String, preslovljen na latinicu:
+
 ```ruby
 >> "Љубав".latinicom
 => "Ljubav"
 
 >> "ЉУБАВ".latinicom
-=> "LJUBAV" # primetite različito preslovljavanju u odnosu na prethodni primer
-            # usled velikih digrafa: nepravilno bi bilo "LjUBAV"
+=> "LJUBAV" # primetite drugačije preslovljavanje digrafa u odnosu na prethodni primer: "LjUBAV" bi bilo pogrešno
 
 >> "Đurđevak".latinicom_ascii
 => "Djurdjevak"
@@ -38,7 +39,7 @@ Ako zatreba, tu je i niz sa slovima abecede:
 ```
 
 Ako koristite Srbovanje uz Rails dobićete setovana pravila za preslovljavanja
-koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
+koje koristi i18n gem, tako da će npr. [parameterize](https://apidock.com/rails/ActiveSupport/Inflector/parameterize) raditi pravilnije:
 
 ```ruby
 ## bez Srbovanja
