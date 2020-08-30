@@ -11,5 +11,7 @@ Gem::Specification.new do |gem|
   gem.homepage    = 'https://github.com/dejan/srbovanje'
   gem.license     = 'MIT'
 
+  gem.add_runtime_dependency "ffi", '>= 1.13.1'
+
   gem.files        = Dir['README.md', 'CHANGELOG.md', 'lib/**/*.rb']
 end
