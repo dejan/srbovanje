@@ -3,14 +3,11 @@ srbovanje
 
 Ruby gem za preslovanjavanje ćirilice na latinicu i tzv. "ošišanu" latinicu
 
-
 ## Instaliranje
 
 U Gemfile projekta dodajte:
 
     gem 'srbovanje'
-
-Od verzije 3.0, Srbovanje zahteva i instaliran [Go](https://golang.org/) kompajler jer koristi ekstenziju zbog dramatično boljih (50x) performansi.
 
 ## Korišćenje
 
@@ -50,7 +47,13 @@ koje koristi i18n gem, tako da će npr. parameterize raditi pravilnije:
 => "saban-saulic"
 ```
 
-## MIT Licence
+## Performanse
+
+Od verzije 3.0, Srbovanje koristi [Go](https://golang.org/) ekstenziju zbog
+dramatično boljih (30x) performansi. Ekstenzija je unapred kompajlirana i
+spakovana uz gem, tako da instaliranje gema nema dodatnih zahteva.
+
+## MIT License
 
 Copyright (c) 2009 Dejan Simic
 
