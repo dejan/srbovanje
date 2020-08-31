@@ -2,7 +2,7 @@
 
 module Srbovanje
 
-  ABECEDA = %w(A B C Č Ć D Dž Đ E F G H I J K L Lj M N Nj O P R S Š T U V Z Ž)
+  ABECEDA = %w(A B C Č Ć D Dž Đ E F G H I J K L Lj M N Nj O P R S Š T U V Z Ž).freeze
 
   LATINICA_FULL_MAP = {
     'ЉА' => 'LJA',
@@ -236,7 +236,7 @@ module Srbovanje
     'Џ' => 'Dž',
     'ш' => 'š',
     'Ш' => 'Š'
-  }
+  }.freeze
 
   LATINICA_ASCII_MAP = {
     'ЉA' => 'LJA',
@@ -922,7 +922,7 @@ module Srbovanje
     'џ' => 'dz',
     'ш' => 's',
     'š' => 's',
-  }
+  }.freeze
 
   LATINICOM_REGEXP = Regexp.union(LATINICA_FULL_MAP.keys)
 
