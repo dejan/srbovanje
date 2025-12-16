@@ -61,6 +61,10 @@ koje koristi i18n gem, tako da će npr. [parameterize](https://apidock.com/rails
 => "saban-saulic"
 ```
 
+## Slični paketi u drugim programskim jezicima
+
+* TypeScript / JavaScript: [preslov](https://github.com/dejan/preslov) 
+
 ## MIT License
 
 Copyright (c) 2009 Dejan Simic
